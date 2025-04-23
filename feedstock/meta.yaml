@@ -1,49 +1,47 @@
-title: "GLAB-VOD"
+title: "LCSPP-AVHRR"
 description: >
-  The Global L-band equivalent AI-Based Vegetation Optical Depth (GLAB-VOD) dataset provides a long-term, temporally consistent record of vegetation optical depth from 2002 to 2020 at 25 km resolution and 18-day intervals. Using machine learning, this dataset extends the SMAP-IB VOD record by fusing brightness temperatures from SMOS, AMSR-E, and AMSR-2 with ancillary soil moisture data from CASM. A companion product, GLAB-TB, offers harmonized brightness temperatures used as intermediate inputs. GLAB-VOD is designed for applications in vegetation monitoring, biomass estimation, and climate studies.
+  The Long-term Continuous SIF-informed Photosynthesis Proxy from AVHRR surface reflectance (LCSPP-AVHRR) provides a globally consistent, biweekly dataset of photosynthetic activity spanning 1982 to 2000 at 0.05° spatial resolution. Version 3.2 of the dataset is constructed by calibrating AVHRR surface reflectance bands against MODIS during their overlapping period (2001–2023), followed by training a neural network to emulate satellite-derived SIF from OCO-2. The LCSPP-AVHRR dataset captures vegetation dynamics with higher fidelity than traditional vegetation indices (e.g., NDVI, kNDVI, NIRv) and is suitable for long-term GPP proxy estimation. All data are provided in NetCDF format with two files per month to represent biweekly intervals.
 
 recipes:
-  - id: "GLAB-VOD"
-    object: "recipe:GLAB-VOD"
+  - id: "LCSPP-AVHRR"
+    object: "recipe:LCSPP-AVHRR"
 
 provenance:
   providers:
     - name: "Columbia University"
-      description: "Primary institution hosting the research and dataset generation"
+      description: "Primary research institution developing the neural network and coordinating data integration"
       roles:
         - producer
         - research institution
       url: https://climate.columbia.edu/
 
-    - name: "INRAE - ISPA, University of Bordeaux"
-      description: "Contributing institution providing SMAP-IB VOD, SMOS TB, and related data"
+    - name: "Seoul National University"
+      description: "Partner institution contributing AVHRR processing and MODIS calibration"
       roles:
         - data provider
         - research institution
-      url: https://www.inrae.fr/
+      url: https://en.snu.ac.kr/
 
     - name: "Zenodo"
-      description: "Permanent archive for GLAB-VOD and GLAB-TB datasets"
+      description: "Permanent archive hosting the LCSPP-AVHRR dataset and associated resources"
       roles:
         - host
-      url: https://zenodo.org/doi/10.5281/zenodo.10306095
+      url: https://zenodo.org/doi/10.5281/zenodo.14568024
 
-license: "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"
+license: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
 
 citation:
-  - authors: "Skulovich, O., Li, X., Wigneron, J.-P., Gentine, P."
-    year: 2024
-    title: "Global L-band equivalent AI-based vegetation optical depth dataset"
-    journal: "Scientific Data"
-    volume: 11
-    pages: 936
-    doi: "10.1038/s41597-024-03810-2"
+  - authors: "Fang, J., Lian, X., Ryu, Y., Jeong, S., Jiang, C., Gentine, P."
+    year: 2025
+    title: "Long-term SIF-informed Photosynthesis Proxy derived from AVHRR surface reflectance"
+    journal: "In prep"
+    doi: "10.5281/zenodo.14568024"
 
 contact:
-  email: "os2328@columbia.edu"
+  email: "jianing.fang@columbia.edu"
 
 maintainers:
+  - name: "Jianing Fang"
+    github: "JianingFang"
   - name: "Mitra Cattry"
     github: "mitraA90"
-  - name: "Raphael Hagen"
-    github: "norlandrhagen"
