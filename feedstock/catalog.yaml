@@ -1,20 +1,18 @@
-# All the information important to cataloging.
-"ncviewjs:meta_yaml_url": "https://github.com/leap-stc/VOD-GLAB/blob/main/feedstock/meta.yaml"
+"ncviewjs:meta_yaml_url": "https://github.com/JianingFang/LCSPP_Scientific_Data/blob/main/feedstock/meta.yaml"
 
 tags:
-  - vegetation optical depth
-  - VOD
-  - L-band
-  - remote sensing
+  - solar-induced chlorophyll fluorescence
+  - SIF proxy
+  - AVHRR
+  - surface reflectance
   - global
-  - climate
-  - vegetation water content
-  - GLAB
+  - long-term
+  - photosynthesis
+  - LCSPP
 
 stores:
-  - id: "vod-glab"
-    name: "VOD-GLAB Global L-band Vegetation Optical Depth"
-    url: "https://zenodo.org/records/10306095/files/VOD-GLAB_L-band_Vegetation_Optical_Depth.zarr"
-    source: "processed VOD sourced from SMOS (L-band), AMSR-2 (10.7, 18.7, 36.5 GHz), AMSR-E (same frequencies as AMSR-2)"
-    source_url: "https://zenodo.org/records/10306095"
-
+  - id: "lcspp-avhrr-1982-2000"
+    name: "LCSPP-AVHRR Long-term Continuous SIF-informed Photosynthesis Proxy v3.2 (1982–2000)"
+    url: "https://zenodo.org/records/14568024/files/LCSPP-AVHRR_v3.2_1982-2000.tar.gz"
+    source: "SIF-informed photosynthesis proxy reconstructed from AVHRR surface reflectance (bands corrected using MODIS overlap, 1982–2000), emulating OCO-2 SIF"
+    source_url: "https://doi.org/10.5281/zenodo.14568024"
