@@ -1,6 +1,5 @@
 "ncviewjs:meta_yaml_url": "https://github.com/JianingFang/LCSPP_Scientific_Data/blob/main/feedstock/meta.yaml"
-
-tags:
+ags:
   - solar-induced chlorophyll fluorescence
   - SIF proxy
   - AVHRR
@@ -13,6 +12,15 @@ tags:
 stores:
   - id: "lcspp-avhrr-1982-2000"
     name: "LCSPP-AVHRR Long-term Continuous SIF-informed Photosynthesis Proxy v3.2 (1982–2000)"
-    url: "https://zenodo.org/records/14568024/files/LCSPP-AVHRR_v3.2_1982-2000.tar.gz"
-    source: "SIF-informed photosynthesis proxy reconstructed from AVHRR surface reflectance (bands corrected using MODIS overlap, 1982–2000), emulating OCO-2 SIF"
+    url: "gs://leap-persistent/data-library/GLAB-CSIF/GLAB-CSIF.zarr"
+    source: "SIF-informed photosynthesis proxy reconstructed from AVHRR surface reflectance (bands corrected using MODIS overlap, 1982–2000), emulating OCO-2 SIF."
     source_url: "https://doi.org/10.5281/zenodo.14568024"
+    variables:
+      time: "Time coordinate (biweekly resolution: each month divided into two periods)."
+      lon: "Longitude coordinate."
+      lat: "Latitude coordinate."
+      lcspp_clear_daily: "Daily LCSPP estimates based on observed or high-quality gap-filled surface reflectance (recommended for most analyses)."
+      lcspp_clear_inst: "Instantaneous LCSPP estimates at satellite overpass time (e.g., local noon), from clear observations."
+      lcspp_all_daily: "Daily LCSPP estimates including all pixels (observed and lower-quality gap-filled data)."
+      lcspp_qa: "Quality assurance flag for each pixel: 0 = observed, 1 = high-quality gap-filled, 2 = lower-quality seasonal gap-fill, 3 = missing."
+

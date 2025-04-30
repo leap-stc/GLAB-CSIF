@@ -13,14 +13,12 @@ provenance:
       roles:
         - producer
         - research institution
-      url: https://climate.columbia.edu/
 
     - name: "Seoul National University"
       description: "Partner institution contributing AVHRR processing and MODIS calibration"
       roles:
         - data provider
         - research institution
-      url: https://en.snu.ac.kr/
 
     - name: "Zenodo"
       description: "Permanent archive hosting the LCSPP-AVHRR dataset and associated resources"
@@ -33,15 +31,13 @@ license: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
 citation:
   - authors: "Fang, J., Lian, X., Ryu, Y., Jeong, S., Jiang, C., Gentine, P."
     year: 2025
-    title: "Long-term SIF-informed Photosynthesis Proxy derived from AVHRR surface reflectance"
-    journal: "In prep"
-    doi: "10.5281/zenodo.14568024"
+    title: "A long-term reconstruction of a global photosynthesis proxy over 1982–2023"
+    journal: "Scientific data"
+    doi: "https://doi.org/10.1038/s41597-025-04686-6"
 
 contact:
-  email: "jianing.fang@columbia.edu"
+  email: "ma4451@columbia.edu"
 
 maintainers:
-  - name: "Jianing Fang"
-    github: "JianingFang"
   - name: "Mitra Cattry"
     github: "mitraA90"
