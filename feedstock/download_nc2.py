@@ -15,20 +15,23 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s",
 )
 logger = logging.getLogger(__name__)
+
+
 def main():
     cluster = LocalCluster(n_workers=2, threads_per_worker=2)
     client = Client(cluster)
+    print(client)
 
     fs = gcsfs.GCSFileSystem()
     base_path = "leap-scratch/mitraa90/GLAB-CSIF/"
     fs.mkdirs(base_path, exist_ok=True)
 
-    years = np.arange(2001,2025)
+    years = np.arange(2001, 2025)
 
     for year in years:
         print(year)
         try:
-            url =f"https://zenodo.org/records/14568491/files/LCSPP_AVHRR_v3.2_{year}.tar.gz?download=1"
+            url = f"https://zenodo.org/records/14568491/files/LCSPP_AVHRR_v3.2_{year}.tar.gz?download=1"
             print(f"⬇️  Downloading and extracting {year}...")
             with requests.get(url, stream=True) as r:
                 r.raise_for_status()
@@ -48,9 +51,10 @@ def main():
                     else:
                         print(f"⚠️ Skipping unexpected member: {member.name}")
         except Exception as e:
-            print(f"❌ Unexpected error while processing {year}: {e}") 
+            print(f"❌ Unexpected error while processing {year}: {e}")
 
     logger.info("Finished download_data.py with decompression")  # ✅ Moved inside main
+
 
 if __name__ == "__main__":
     logger.info("Starting download_data.py with decompression")
