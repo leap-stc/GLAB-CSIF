@@ -3,6 +3,23 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+
+# ───────────────────────────────────────────
+# Project-specific: feedstock folder rules
+# ───────────────────────────────────────────
+
+# Ignore everything in feedstock
+/feedstock/*
+
+# But do not ignore these specific files
+!/feedstock/catalog.yaml
+!/feedstock/download_nc.py
+!/feedstock/download_nc2.py
+!/feedstock/meta.yaml
+!/feedstock/recipe.py
+!/feedstock/requirements.txt
+
 # C extensions
 *.so
 
