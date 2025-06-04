@@ -10,7 +10,7 @@ ags:
   - LCSPP
 
 stores:
-  - id: "lcspp-avhrr-1982-2000"
+  - id: lcspp-avhrr-1982-2000
     name: LCSPP-AVHRR Long-term Continuous SIF-informed Photosynthesis Proxy v3.2 (1982–2000)
     url: "gs://leap-persistent/data-library/GLAB-CSIF/GLAB-CSIF.zarr"
     source: "SIF-informed photosynthesis proxy reconstructed from AVHRR surface reflectance (bands corrected using MODIS overlap, 1982–2000), emulating OCO-2 SIF."
