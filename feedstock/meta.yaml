@@ -1,27 +1,6 @@
 title: "LCSPP-AVHRR Photosynthesis Proxy"
 description: "The Long-term Continuous SIF-informed Photosynthesis Proxy from AVHRR surface reflectance (LCSPP-AVHRR) provides a globally consistent, biweekly dataset of photosynthetic activity spanning 1982 to 2000 at 0.05° spatial resolution. Version 3.2 of the dataset is constructed by calibrating AVHRR surface reflectance bands against MODIS during their overlapping period (2001–2023), followed by training a neural network to emulate satellite-derived SIF from OCO-2. The LCSPP-AVHRR dataset captures vegetation dynamics with higher fidelity than traditional vegetation indices (e.g., NDVI, kNDVI, NIRv) and is suitable for long-term GPP proxy estimation. All data are provided in zarr format in one file to represent biweekly intervals."
 
-provenance:
-  providers:
-    - name: "Columbia University"
-      description: "Primary research institution"
-      roles:
-        - producer
-        - research institution
-
-    - name: "Seoul National University"
-      description: "Partner institution contributing AVHRR processing and MODIS calibration"
-      roles:
-        - data provider
-        - research institution
-
-    - name: "Zenodo"
-      description: "Permanent archive hosting the LCSPP-AVHRR dataset and associated resources"
-      roles:
-        - host
-
-  license: "Creative Commons Attribution 4.0 International (CC BY 4.0)"
-
 
 maintainers:
   - name: "Mitra Cattry"
